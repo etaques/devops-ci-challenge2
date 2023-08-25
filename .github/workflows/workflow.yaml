@@ -53,6 +53,7 @@ jobs:
           tags: ghcr.io/etaques/devops-ci-challenge2:${{ github.sha }}
         
   deploy-to-ecs:
+    needs: test-and-build
     runs-on: ubuntu-latest
     steps:
       - name: checkout
