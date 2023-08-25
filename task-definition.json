@@ -1,0 +1,52 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:061068953064:task-definition/fslTask:4",
+    "containerDefinitions": [
+        {
+            "name": "fsl",
+            "image": "ghcr.io/etaques/devops-ci-challenge2:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "fsl-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": []
+        }
+    ],
+    "family": "fslTask",
+    "executionRoleArn": "arn:aws:iam::061068953064:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 4,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "307",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-08-25T19:26:08.084Z",
+    "registeredBy": "arn:aws:iam::061068953064:root",
+    "tags": []
+}
