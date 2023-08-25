@@ -37,6 +37,12 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+          env:
+           - name: MY_SECRET
+             valueFrom:
+               secretKeyRef:
+                 name: mysecret
+                 key: MY_SECRET
           livenessProbe:
             httpGet:
               path: /
